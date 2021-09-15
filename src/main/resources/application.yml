@@ -4,13 +4,13 @@ spring:
     # Put here your user name
     username: root
     # Put here your password
-    password: ''
+    password: Spring1234
     url: jdbc:mysql://localhost:3306/spring_data_lab_db?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true
   jpa:
     #For MySQL 8 uncomment bellow (comment MySQL 5)
-    #database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     #For MySQL 5 (innodb dialect below)
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: create-drop
     open-in-view: false
@@ -21,3 +21,8 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
+  security:
+    user:
+      name: root
+      password: Spring1234
+
