@@ -12,15 +12,18 @@ import javax.persistence.Table;
 @Table(name="models")
 public class ModelEntity extends BaseEntity {
 
+  @Column(nullable = false)
   private String name;
 
   @Enumerated(EnumType.STRING)
+  @Column(nullable = false)
   private ModelCategoryEnum category;
 
-  @Column(length = 512)
+  @Column(length = 512, nullable = false)
   private String imageUrl;
 
-  private int startYear;
+  @Column(nullable = false)
+  private Integer startYear;
 
   private Integer endYear;
 
